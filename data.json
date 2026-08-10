@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "description": "Daily tracking state for F-1/SEVP/DS-2019 policy monitoring, focused on relevance to a Virginia Tech student who may need an extra semester to finish their degree.",
+    "lastRunDate": "2026-08-10",
+    "lastRunTimezone": "America/New_York",
+    "schemaVersion": 1
+  },
+  "items": [
+    {
+      "id": "d-s-final-rule",
+      "title": "DHS Final Rule: Fixed Time Period of Admission & Extension of Stay (ends Duration of Status) for F, J, I nonimmigrants",
+      "category": "Federal Register / DHS-ICE SEVP",
+      "severity": "major",
+      "publishedDate": "2026-07-17",
+      "effectiveDate": "2026-09-15",
+      "firstSeen": "2026-08-10",
+      "lastUpdated": "2026-08-10",
+      "summaryHash": "40a41ebdecf15d0a",
+      "sourceUrl": "https://www.federalregister.gov/documents/2026/07/17/2026-14439/establishing-a-fixed-time-period-of-admission-and-an-extension-of-stay-procedure-for-nonimmigrant",
+      "status": "active-unimplemented",
+      "notes": "Rule is published and not yet in effect (effective 2026-09-15). Subject to Congressional Review Act review; NAFSA and higher-ed associations have signaled intent to challenge but no lawsuit filed as of last check. Track for: CRA disapproval resolution, injunction/lawsuit filings, DHS FAQ updates, and any delay of the effective date."
+    }
+  ],
+  "watchSources": [
+    {"name": "ICE SEVP - What's New", "url": "https://www.ice.gov/sevis/whats-new"},
+    {"name": "Study in the States - Final Rule Hub", "url": "https://studyinthestates.dhs.gov/final-rule-establishing-a-fixed-time-period-of-admission-and-an-extension-of-stay-procedure-quick"},
+    {"name": "Federal Register - Rule Document 2026-14439", "url": "https://www.federalregister.gov/documents/2026/07/17/2026-14439/establishing-a-fixed-time-period-of-admission-and-an-extension-of-stay-procedure-for-nonimmigrant"},
+    {"name": "USCIS Policy Manual Updates", "url": "https://www.uscis.gov/policy-manual/updates"},
+    {"name": "USCIS Policy Manual Vol. 2 Part F (Students)", "url": "https://www.uscis.gov/policy-manual/volume-2-part-f"},
+    {"name": "NAFSA - Duration of Status Rule", "url": "https://www.nafsa.org/duration-status"},
+    {"name": "Virginia Tech Cranwell International Center - Immigration Updates", "url": "https://international.vt.edu/immigration_updates.html"}
+  ],
+  "runHistory": [
+    {"date": "2026-08-10", "changeDetected": false, "note": "Baseline run - no prior snapshot existed to diff against. All items above recorded for the first time."}
+  ]
+}
