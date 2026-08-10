@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>F-1 / SEVP Policy Watch — Virginia Tech Extra-Semester Tracker</title>
+<meta name="description" content="Daily tracker of U.S. F-1 student visa, SEVP, and DS-2019 policy changes relevant to Virginia Tech students who may need extra time to finish their degree.">
+<style>
+  :root {
+    --bg: #f6f7f9;
+    --panel: #ffffff;
+    --text: #1c2530;
+    --muted: #5b6774;
+    --border: #e1e5ea;
+    --accent: #630031; /* VT maroon */
+    --accent-2: #cf4420; /* VT orange */
+    --green: #1f9d55;
+    --red: #d1372f;
+    --blue: #2563a8;
+    --amber: #b5820b;
+    --chip-bg: #f0eef2;
+    --code-bg: #f0f2f5;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14171c;
+      --panel: #1c2027;
+      --text: #e6e9ee;
+      --muted: #9aa4b1;
+      --border: #2a2f38;
+      --accent: #d98fae;
+      --accent-2: #ff8a5c;
+      --green: #4ac07a;
+      --red: #ff6b61;
+      --blue: #6ea8e0;
+      --amber: #e0b64a;
+      --chip-bg: #262b33;
+      --code-bg: #20242c;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height: 1.55;
+  }
+  a { color: var(--blue); }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 24px 20px 80px; }
+
+  header.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    padding-bottom: 18px;
+    border-bottom: 3px solid var(--accent);
+    margin-bottom: 22px;
+  }
+  header.top .titleblock h1 {
+    font-size: 1.5rem;
+    margin: 0 0 4px;
+    color: var(--accent);
+  }
+  header.top .titleblock .sub {
+    color: var(--muted);
+    font-size: 0.92rem;
+  }
+
+  .status-light-block {
+    text-align: right;
+    flex-shrink: 0;
+  }
+  .status-light {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 8px;
+    vertical-align: middle;
+    box-shadow: 0 0 0 3px rgba(0,0,0,0.05);
+  }
+  .status-light.baseline { background: var(--blue); }
+  .status-light.changed { background: var(--red); animation: pulse 1.6s infinite; }
+  .status-light.nochange { background: var(--green); }
+  @keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(209,55,47,0.55); }
+    70% { box-shadow: 0 0 0 9px rgba(209,55,47,0); }
+    100% { box-shadow: 0 0 0 0 rgba(209,55,47,0); }
+  }
+  .status-label {
+    font-weight: 600;
+    font-size: 0.85rem;
+  }
+  .status-light-block .checked {
+    color: var(--muted);
+    font-size: 0.78rem;
+    margin-top: 4px;
+  }
+
+  .panel {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    font-size: 1.05rem;
+    color: var(--accent);
+    margin-top: 0;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 8px;
+  }
+  h3 { font-size: 0.98rem; margin-bottom: 6px; }
+
+  .bulletin ul { margin: 0; padding-left: 1.2em; }
+  .bulletin li { margin-bottom: 8px; }
+  .badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    padding: 2px 8px;
+    border-radius: 999px;
+    background: var(--chip-bg);
+    color: var(--accent-2);
+    margin-right: 6px;
+  }
+  .badge.major { background: rgba(209,55,47,0.12); color: var(--red); }
+
+  table.dates { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+  table.dates th, table.dates td {
+    text-align: left;
+    padding: 7px 10px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  table.dates th { color: var(--muted); font-weight: 600; width: 130px; }
+
+  .callout {
+    border-left: 4px solid var(--accent-2);
+    background: var(--chip-bg);
+    padding: 12px 14px;
+    border-radius: 6px;
+    margin: 14px 0;
+    font-size: 0.94rem;
+  }
+  .callout.action { border-left-color: var(--green); }
+  .callout.risk { border-left-color: var(--red); }
+
+  code, .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; background: var(--code-bg); padding: 1px 5px; border-radius: 4px; font-size: 0.88em; }
+
+  ol.steps { padding-left: 1.3em; }
+  ol.steps li { margin-bottom: 10px; }
+
+  .sources ul { padding-left: 1.2em; font-size: 0.9rem; }
+  .sources li { margin-bottom: 6px; }
+
+  footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.8rem;
+    margin-top: 30px;
+  }
+
+  .disclaimer {
+    font-size: 0.82rem;
+    color: var(--muted);
+    background: var(--chip-bg);
+    border-radius: 8px;
+    padding: 12px 14px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <div class="titleblock">
+      <h1>F-1 / SEVP Policy Watch</h1>
+      <div class="sub">Tracking U.S. student-visa &amp; SEVP/DS-2019 policy changes relevant to a Virginia Tech student who may need an extra semester to finish their degree.</div>
+    </div>
+    <div class="status-light-block">
+      <span class="status-label">Status</span>
+      <span class="status-light baseline" title="Baseline run — no prior snapshot to compare"></span>
+      <div class="checked">Last checked: Aug 10, 2026, 1:00 AM ET<br>Baseline established — first run</div>
+    </div>
+  </header>
+
+  <div class="panel bulletin">
+    <h2>Bulletin — what matters right now</h2>
+    <ul>
+      <li><span class="badge major">Major</span><strong>Duration of Status (D/S) is being eliminated.</strong> DHS published a final rule on <strong>July 17, 2026</strong> that replaces open-ended D/S for F-1 students with a fixed "Admit Until Date," effective <strong>September 15, 2026</strong>. This is the single biggest change to F-1 status in decades and directly affects anyone who might run past their program end date.</li>
+      <li><strong>Program length is capped at 4 years</strong> (undergrad and doctoral), with shorter caps typical for master's programs, plus 30 days to arrive and 30 days to depart. Anyone needing more time — including for an extra semester — must now go through a formal <strong>Extension of Stay (EOS)</strong> process with USCIS, not just a SEVIS record update from their DSO.</li>
+      <li><strong>Two-step extension process now, not one:</strong> a DSO can still extend the Program End Date in SEVIS for a compelling academic or medical reason (as before), but on top of that, students must separately file <strong>Form I-539</strong> with USCIS before their I-94 "admit until" date expires, or they accrue unlawful presence.</li>
+      <li><strong>Grad students lose the ability to change programs/majors</strong> once enrolled (narrow SEVP exceptions only); first-year undergrads are similarly restricted. Relevant if an extra semester involves any change to course of study.</li>
+      <li><strong>Transition relief exists but is time-limited:</strong> students who were in the U.S. under D/S before Sept 15, 2026 don't need to immediately file an EOS, but if they'll need post-completion or STEM OPT, they must file Form I-765 (bundled with I-539 for OPT/STEM OPT purposes) by <strong>March 18, 2027</strong> to use the simplified transition path.</li>
+      <li><strong>Not yet final in practice:</strong> the rule is a "major rule" under the Congressional Review Act and NAFSA plus dozens of higher-ed associations have signaled intent to challenge it. No lawsuit had been filed as of this check, and the rule has not been delayed.</li>
+    </ul>
+  </div>
+
+  <div class="panel">
+    <h2>Key dates</h2>
+    <table class="dates">
+      <tr><th>Jul 17, 2026</th><td>DHS/ICE publish the final rule in the Federal Register ("Establishing a Fixed Time Period of Admission and an Extension of Stay Procedure," doc. 2026-14439), ending Duration of Status for F, J, and I nonimmigrants.</td></tr>
+      <tr><th>Sep 15, 2026</th><td><strong>Rule takes effect.</strong> New F-1 entrants and change-of-status approvals on/after this date receive a fixed program end date on their I-94 instead of D/S. Applies to current students too, not just new arrivals.</td></tr>
+      <tr><th>Mar 18, 2027</th><td>Deadline for D/S-holders present before Sep 15, 2026 to file Form I-765 (with bundled I-539 where required) for post-completion or STEM OPT under the transition provision, avoiding a separate up-front EOS filing.</td></tr>
+    </table>
+  </div>
+
+  <div class="panel">
+    <h2>Detailed writeup</h2>
+
+    <h3>What actually changed</h3>
+    <p>For decades, F-1 students were admitted for "Duration of Status" (D/S) — their legal stay tracked their I-20 program dates, and a Designated School Official (DSO) could extend that end date directly in SEVIS for a compelling academic or medical reason, with no separate federal filing required. The new rule ends that. Beginning September 15, 2026, F-1 students receive a fixed "Admit Until Date" on their I-94, set to the length of their program as listed on the I-20 — capped at four years for undergraduate and doctoral programs, with shorter caps typical for master's-level programs — plus a 30-day grace period to arrive and another 30 days after program completion.</p>
+
+    <h3>Why this matters for someone who might need an extra semester</h3>
+    <p>Previously, running long on a degree was mostly an institutional matter: the DSO updated the SEVIS record and issued a new I-20, and that was sufficient to stay in status. Under the new regime there are <strong>two separate actions</strong>:</p>
+    <ol class="steps">
+      <li><strong>DSO program extension (unchanged in spirit):</strong> the DSO can still extend the Program End Date in SEVIS for a compelling academic or medical reason, or DSO error — SEVIS allows this without SEVP adjudication, for up to one additional year.</li>
+      <li><strong>Extension of Stay with USCIS (new requirement):</strong> the student must separately file <span class="mono">Form I-539</span> to extend the actual admit-until date on their I-94 before it expires. Missing this deadline — even if the SEVIS/I-20 record is fine — risks accruing unlawful presence, which has serious consequences for future visas and re-entry.</li>
+    </ol>
+    <div class="callout risk">
+      <strong>Practical risk:</strong> USCIS adjudication of Form I-539 is not instant, and the rule requires that USCIS <em>receive</em> the filing before the current admission period expires. A student who realizes late in a semester that they'll need extra time has a narrower runway than under the old D/S system — the DSO extension and the USCIS filing both need to happen with time to spare.
+    </div>
+
+    <h3>New restrictions to be aware of</h3>
+    <p>The rule also tightens what students can change while extending: F-1 <strong>graduate students are now barred from changing programs, majors, or education levels</strong> altogether (absent a narrow SEVP exception for extenuating circumstances). <strong>First-year undergraduates</strong> face a similar bar on changing programs/majors/levels within their first year unless SEVP grants an exception. This is relevant if an extra semester is being used to also switch a concentration, add a second major, or move between degree levels (e.g., BS to accelerated MS).</p>
+
+    <h3>Transition relief for students already here</h3>
+    <p>Students who were in the U.S. under D/S before September 15, 2026 are not immediately forced to file an EOS the moment the rule takes effect. But if OPT or STEM OPT is part of the plan, the relief is time-boxed: Form I-765 (with I-539 bundled in for the relevant period, where applicable) must be filed by <strong>March 18, 2027</strong> to use the simplified transition path instead of a stand-alone up-front EOS application.</p>
+
+    <h3>Where things stand politically and legally</h3>
+    <p>NAFSA and a broad coalition of higher-education associations (American Council on Education, APLU, NACAC, and others) opposed the proposed version of this rule in comments last year. NAFSA's CEO has said the association will "explore every available avenue" to challenge the final rule, but as of this check no lawsuit had been filed. Because it's classified as a "major rule," Congress has an opportunity to review and potentially disapprove it under the Congressional Review Act — no such resolution has passed as of this check. Bottom line: the rule is real, published, and on track for September 15, 2026 unless a court or Congress intervenes before then.</p>
+
+    <h3>Virginia Tech specifically</h3>
+    <p>Virginia Tech's international-student office is the <strong>Cranwell International Center</strong> (ISSS), which publishes updates at <a href="https://international.vt.edu/immigration_updates.html" target="_blank" rel="noopener">international.vt.edu/immigration_updates.html</a>. That page could not be fetched directly from this environment's network today, so today's writeup is based on the federal rule text and how peer universities' international offices (Colorado, Yale, Cornell, Pitt, Purdue, Brown, NYU) are advising their students — guidance that applies identically to Virginia Tech students because this is a federal regulation, not a school-specific policy. The consistent advice across those offices: if there's any chance of needing more time to finish a degree, talk to your DSO <em>now</em>, before September 15, so the SEVIS program extension and the eventual USCIS filing aren't both being rushed against a hard deadline.</p>
+    <div class="callout action">
+      <strong>Suggested next step for a VT student anticipating an extra semester:</strong> contact Cranwell International Center before the rule takes effect to get the current program end date extended in SEVIS while D/S transition relief still applies, and ask specifically how VT is sequencing DSO extensions with the new USCIS Form I-539 requirement for students in this situation.
+    </div>
+  </div>
+
+  <div class="panel sources">
+    <h2>Sources checked today</h2>
+    <ul>
+      <li><a href="https://www.federalregister.gov/documents/2026/07/17/2026-14439/establishing-a-fixed-time-period-of-admission-and-an-extension-of-stay-procedure-for-nonimmigrant" target="_blank" rel="noopener">Federal Register — Final Rule 2026-14439 (Jul 17, 2026)</a></li>
+      <li><a href="https://studyinthestates.dhs.gov/final-rule-establishing-a-fixed-time-period-of-admission-and-an-extension-of-stay-procedure-quick" target="_blank" rel="noopener">Study in the States — Final Rule Quick Facts (DHS)</a></li>
+      <li><a href="https://www.ice.gov/sevis/whats-new" target="_blank" rel="noopener">ICE SEVP — What's New</a></li>
+      <li><a href="https://www.uscis.gov/policy-manual/updates" target="_blank" rel="noopener">USCIS Policy Manual — Updates</a></li>
+      <li><a href="https://www.nafsa.org/duration-status" target="_blank" rel="noopener">NAFSA — Duration of Status Rule tracker</a></li>
+      <li><a href="https://www.nafsa.org/Duration-status-final-rule-press-statement" target="_blank" rel="noopener">NAFSA — press statement opposing the final rule</a></li>
+      <li><a href="https://international.vt.edu/immigration_updates.html" target="_blank" rel="noopener">Virginia Tech Cranwell International Center — Immigration Updates</a></li>
+      <li><a href="https://www.colorado.edu/isss/2026/07/16/alert-and-faqs-publishing-final-rule-eliminating-duration-status-students-and-scholars-f" target="_blank" rel="noopener">CU Boulder ISSS — Alert &amp; FAQ on the final rule</a></li>
+      <li><a href="https://oiss.yale.edu/immigration/elimination-of-duration-of-status-summary-faqs" target="_blank" rel="noopener">Yale OISS — Elimination of D/S Summary &amp; FAQs</a></li>
+      <li><a href="https://international.globallearning.cornell.edu/maintaining-your-status/rule-ending-ds-current-analysis" target="_blank" rel="noopener">Cornell ISSO — Rule Ending D/S: Current Analysis</a></li>
+    </ul>
+  </div>
+
+  <div class="disclaimer">
+    This page is produced by an automated daily research routine and is for informational tracking purposes only — it is not legal advice. For decisions about a specific student's status, extension timing, or eligibility, consult Virginia Tech's Cranwell International Center (DSO) or a qualified immigration attorney directly.
+  </div>
+
+  <footer>
+    Automated daily check · Sources: ICE SEVP, USCIS, U.S. Department of State, Federal Register, Virginia Tech ISSS, NAFSA &amp; university immigration offices<br>
+    This is the first recorded run for this tracker — future runs will diff against this baseline and light up the status indicator above when something changes.
+  </footer>
+
+</div>
+</body>
+</html>

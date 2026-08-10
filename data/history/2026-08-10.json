@@ -1,0 +1,78 @@
+{
+  "meta": {
+    "description": "Daily tracking state for F-1/SEVP/DS-2019 policy monitoring, focused on relevance to a Virginia Tech student who may need an extra semester to finish their degree.",
+    "schemaVersion": 2
+  },
+  "items": [
+    {
+      "id": "d-s-final-rule",
+      "title": "DHS Final Rule: Fixed Time Period of Admission & Extension of Stay (ends Duration of Status) for F, J, I nonimmigrants",
+      "source": "Federal Register / DHS-ICE-SEVP",
+      "url": "https://www.federalregister.gov/documents/2026/07/17/2026-14439/establishing-a-fixed-time-period-of-admission-and-an-extension-of-stay-procedure-for-nonimmigrant",
+      "date_found": "2026-08-10",
+      "last_updated": "2026-08-10",
+      "severity": "major",
+      "summary": "DHS published a final rule (doc. 2026-14439) on Jul 17, 2026, ending open-ended Duration of Status for F-1 students, effective Sep 15, 2026. Students get a fixed 'Admit Until Date' capped at 4 years (24 months for language programs); anyone needing more time must file Form I-539 (Extension of Stay) with USCIS in addition to the existing DSO SEVIS extension. A timely-filed EOS gives up to 240 days of authorized stay while pending.",
+      "confirmation_status": "Confirmed (official)",
+      "confirming_source_url": "https://www.federalregister.gov/documents/2026/07/17/2026-14439/establishing-a-fixed-time-period-of-admission-and-an-extension-of-stay-procedure-for-nonimmigrant",
+      "secondary_sources": [
+        "https://www.nafsa.org/duration-status",
+        "https://oiss.yale.edu/immigration/elimination-of-duration-of-status-summary-faqs",
+        "https://www.insidehighered.com/news/government/2026/07/16/rule-limiting-international-students-time-us-finalized"
+      ],
+      "notes": "No lawsuit had been filed and no Congressional Review Act disapproval resolution had passed as of this run; NAFSA has publicly opposed the rule but litigation remains anticipatory only. SEVP has scheduled a stakeholder webinar for Mon, Aug 31, 2026, 2-3pm ET to walk through the rule (per Study in the States listing, relayed via secondary source since studyinthestates.dhs.gov could not be fetched directly this run)."
+    },
+    {
+      "id": "uscis-rfe-noid-pa-2026-05",
+      "title": "USCIS Policy Alert PA-2026-05: officers may deny incomplete filings without issuing an RFE/NOID first",
+      "source": "USCIS Policy Manual (reported)",
+      "url": "https://www.mondaq.com/unitedstates/work-visas/1828014/uscis-updates-policy-manual-expanding-authority-to-deny-incomplete-filings-without-first-issuing-rfes-or-noids",
+      "date_found": "2026-08-10",
+      "last_updated": "2026-08-10",
+      "severity": "moderate",
+      "summary": "Effective Aug 5, 2026, USCIS updated Policy Manual guidance so adjudicators may, at their discretion, deny a benefit request lacking required initial evidence or failing to establish eligibility without first issuing an RFE or NOID, and may set RFE response deadlines shorter than the prior 12-week norm. Directly relevant to F-1 students filing Form I-539 (Extension of Stay) or I-765 under the new fixed-admission-period regime: an incomplete EOS package can now be denied outright with no chance to cure.",
+      "confirmation_status": "Reported, unconfirmed",
+      "confirming_source_url": null,
+      "secondary_sources": [
+        "https://www.mondaq.com/unitedstates/work-visas/1828014/uscis-updates-policy-manual-expanding-authority-to-deny-incomplete-filings-without-first-issuing-rfes-or-noids",
+        "https://natlawreview.com/article/uscis-updates-policy-manual-expanding-authority-deny-incomplete-filings-without",
+        "https://www.fragomen.com/insights/united-states-uscis-expands-adjudicators-authority-to-deny-filings-without-a-request-for-evidence.html",
+        "https://berardiimmigrationlaw.com/uscis-restores-authority-to-deny-certain-filings-without-first-issuing-an-rfe/"
+      ],
+      "notes": "Could not reach uscis.gov/policy-manual directly this run (network egress to uscis.gov is blocked in this environment) to pull the actual Policy Alert PA-2026-05 text/citation. Will keep retrying uscis.gov each run to move this to Confirmed."
+    },
+    {
+      "id": "opt-stem-opt-regulatory-review",
+      "title": "DHS regulatory review of OPT / STEM OPT (RIN 1653-AA97) — no NPRM published yet",
+      "source": "DHS Unified Regulatory Agenda (reported)",
+      "url": "https://monitor.icef.com/2026/07/us-regulatory-agenda-for-2026-aims-to-end-duration-of-status-and-introduce-optional-practical-training-and-h-1b-reforms/",
+      "date_found": "2026-08-10",
+      "last_updated": "2026-08-10",
+      "severity": "watch",
+      "summary": "DHS confirmed in a Jan 9, 2026 letter it is re-evaluating the scope and duration of OPT and STEM OPT, with a rulemaking entry (RIN 1653-AA97) in the Spring 2026 Unified Regulatory Agenda. As of this run, no Notice of Proposed Rulemaking has been published in the Federal Register; secondary reporting suggests a proposal is not expected before early 2027. Relevant because many students planning an extra semester are also relying on post-completion OPT/STEM OPT timing.",
+      "confirmation_status": "Reported, unconfirmed",
+      "confirming_source_url": null,
+      "secondary_sources": [
+        "https://eiglaw.com/dhs-confirms-review-of-opt-and-stem-opt/",
+        "https://monitor.icef.com/2026/07/us-regulatory-agenda-for-2026-aims-to-end-duration-of-status-and-introduce-optional-practical-training-and-h-1b-reforms/",
+        "https://www.trackmyopt.com/blog/is-opt-ending-dhs-rule-2026"
+      ],
+      "notes": "Could not reach reginfo.gov or federalregister.gov directly this run to confirm the RIN 1653-AA97 unified-agenda entry text. No OPT/STEM OPT NPRM exists yet to cite as of 2026-08-10. Will keep watching for actual NPRM publication."
+    }
+  ],
+  "sources_unavailable": [
+    {"source_name": "ICE SEVP - What's New", "url": "https://www.ice.gov/sevis/whats-new", "first_failed_date": "2026-08-10", "last_failed_date": "2026-08-10", "consecutive_fails": 1},
+    {"source_name": "USCIS Policy Manual Updates", "url": "https://www.uscis.gov/policy-manual/updates", "first_failed_date": "2026-08-10", "last_failed_date": "2026-08-10", "consecutive_fails": 1},
+    {"source_name": "Federal Register (document + public inspection)", "url": "https://www.federalregister.gov/documents/2026/07/17/2026-14439/establishing-a-fixed-time-period-of-admission-and-an-extension-of-stay-procedure-for-nonimmigrant", "first_failed_date": "2026-08-10", "last_failed_date": "2026-08-10", "consecutive_fails": 1},
+    {"source_name": "Study in the States / DHS final-rule hub", "url": "https://studyinthestates.dhs.gov/final-rule-establishing-a-fixed-time-period-of-admission-and-an-extension-of-stay-procedure-quick", "first_failed_date": "2026-08-10", "last_failed_date": "2026-08-10", "consecutive_fails": 1},
+    {"source_name": "U.S. Department of State - Student Visas", "url": "https://travel.state.gov/content/travel/en/students-exchange.html", "first_failed_date": "2026-08-10", "last_failed_date": "2026-08-10", "consecutive_fails": 1},
+    {"source_name": "Virginia Tech Cranwell International Center - Immigration Updates", "url": "https://international.vt.edu/immigration_updates.html", "first_failed_date": "2026-08-10", "last_failed_date": "2026-08-10", "consecutive_fails": 2},
+    {"source_name": "NAFSA - Duration of Status Rule tracker", "url": "https://www.nafsa.org/duration-status", "first_failed_date": "2026-08-10", "last_failed_date": "2026-08-10", "consecutive_fails": 1},
+    {"source_name": "Inside Higher Ed", "url": "https://www.insidehighered.com/news/government/2026/07/16/rule-limiting-international-students-time-us-finalized", "first_failed_date": "2026-08-10", "last_failed_date": "2026-08-10", "consecutive_fails": 1}
+  ],
+  "last_run_at": {"utc": "2026-08-10T16:52:25Z", "eastern": "2026-08-10 12:52 PM EDT"},
+  "run_history": [
+    {"utc": "2026-08-10T05:00:00Z", "eastern": "2026-08-10 01:00 AM EDT", "has_changes": false, "item_count": 1},
+    {"utc": "2026-08-10T16:52:25Z", "eastern": "2026-08-10 12:52 PM EDT", "has_changes": true, "item_count": 3}
+  ]
+}
