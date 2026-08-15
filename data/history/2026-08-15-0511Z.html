@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>F-1 / SEVP Policy Watch — Virginia Tech Extra-Semester Tracker</title>
+<meta name="description" content="Daily tracker of U.S. F-1 student visa, SEVP, and DS-2019 policy changes relevant to Virginia Tech students who may need extra time to finish their degree.">
+<style>
+  :root {
+    --bg: #f6f7f9;
+    --panel: #ffffff;
+    --text: #1c2530;
+    --muted: #5b6774;
+    --border: #e1e5ea;
+    --accent: #630031; /* VT maroon */
+    --accent-2: #cf4420; /* VT orange */
+    --green: #1f9d55;
+    --red: #d1372f;
+    --blue: #2563a8;
+    --amber: #b5820b;
+    --chip-bg: #f0eef2;
+    --code-bg: #f0f2f5;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14171c;
+      --panel: #1c2027;
+      --text: #e6e9ee;
+      --muted: #9aa4b1;
+      --border: #2a2f38;
+      --accent: #d98fae;
+      --accent-2: #ff8a5c;
+      --green: #4ac07a;
+      --red: #ff6b61;
+      --blue: #6ea8e0;
+      --amber: #e0b64a;
+      --chip-bg: #262b33;
+      --code-bg: #20242c;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height: 1.55;
+  }
+  a { color: var(--blue); }
+  .wrap { max-width: 900px; margin: 0 auto; padding: 24px 20px 80px; }
+
+  header.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    padding-bottom: 18px;
+    border-bottom: 3px solid var(--accent);
+    margin-bottom: 22px;
+    flex-wrap: wrap;
+  }
+  header.top .titleblock h1 {
+    font-size: 1.5rem;
+    margin: 0 0 4px;
+    color: var(--accent);
+  }
+  header.top .titleblock .sub {
+    color: var(--muted);
+    font-size: 0.92rem;
+  }
+
+  .status-light-block {
+    text-align: right;
+    flex-shrink: 0;
+  }
+  .status-light {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 8px;
+    vertical-align: middle;
+  }
+  .status-light.changed {
+    background: #ff4136;
+    box-shadow: 0 0 0 3px rgba(255,65,54,0.25), 0 0 12px 3px rgba(255,65,54,0.65);
+    animation: pulse 1.6s infinite;
+  }
+  .status-light.nochange {
+    background: #8a939e;
+    box-shadow: 0 0 0 3px rgba(0,0,0,0.05);
+  }
+  @keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(255,65,54,0.55), 0 0 12px 3px rgba(255,65,54,0.65); }
+    70% { box-shadow: 0 0 0 9px rgba(255,65,54,0), 0 0 12px 3px rgba(255,65,54,0.5); }
+    100% { box-shadow: 0 0 0 0 rgba(255,65,54,0), 0 0 12px 3px rgba(255,65,54,0.65); }
+  }
+  .status-label {
+    font-weight: 700;
+    font-size: 0.88rem;
+  }
+  .status-label.changed { color: var(--red); }
+  .status-label.nochange { color: var(--muted); }
+  .status-light-block .checked {
+    color: var(--muted);
+    font-size: 0.78rem;
+    margin-top: 4px;
+  }
+
+  .panel {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    font-size: 1.05rem;
+    color: var(--accent);
+    margin-top: 0;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 8px;
+  }
+  h3 { font-size: 0.98rem; margin-bottom: 4px; }
+
+  .bulletin ul { margin: 0; padding-left: 1.2em; }
+  .bulletin li { margin-bottom: 10px; }
+  .badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    padding: 2px 8px;
+    border-radius: 999px;
+    background: var(--chip-bg);
+    color: var(--accent-2);
+    margin-right: 6px;
+  }
+  .badge.major { background: rgba(209,55,47,0.12); color: var(--red); }
+  .badge.new { background: var(--red); color: #fff; }
+  .badge.updated { background: var(--accent-2); color: #fff; }
+  .badge.confirmed { background: rgba(31,157,85,0.14); color: var(--green); }
+  .badge.unconfirmed { background: rgba(181,130,11,0.16); color: var(--amber); }
+  .badge.watch { background: var(--chip-bg); color: var(--muted); }
+
+  table.dates { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+  table.dates th, table.dates td {
+    text-align: left;
+    padding: 7px 10px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  table.dates th { color: var(--muted); font-weight: 600; width: 130px; }
+
+  .callout {
+    border-left: 4px solid var(--accent-2);
+    background: var(--chip-bg);
+    padding: 12px 14px;
+    border-radius: 6px;
+    margin: 14px 0;
+    font-size: 0.94rem;
+  }
+  .callout.action { border-left-color: var(--green); }
+  .callout.risk { border-left-color: var(--red); }
+
+  code, .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; background: var(--code-bg); padding: 1px 5px; border-radius: 4px; font-size: 0.88em; }
+
+  ol.steps { padding-left: 1.3em; }
+  ol.steps li { margin-bottom: 10px; }
+
+  .item-block { border-top: 1px solid var(--border); padding-top: 16px; margin-top: 16px; }
+  .item-block:first-child { border-top: none; padding-top: 0; margin-top: 0; }
+  .item-block h3 { margin-bottom: 4px; }
+  .item-meta { font-size: 0.8rem; color: var(--muted); margin-bottom: 8px; }
+  .src-list { font-size: 0.85rem; }
+  .src-list a { display: inline-block; margin-right: 10px; }
+
+  table.sources { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+  table.sources th, table.sources td {
+    text-align: left;
+    padding: 6px 8px;
+    border-bottom: 1px solid var(--border);
+  }
+  table.sources th { color: var(--muted); font-weight: 600; }
+  .ok { color: var(--green); font-weight: 600; }
+  .fail { color: var(--red); font-weight: 600; }
+
+  table.runhist { width: 100%; border-collapse: collapse; font-size: 0.82rem; }
+  table.runhist th, table.runhist td { text-align: left; padding: 5px 8px; border-bottom: 1px solid var(--border); }
+  table.runhist th { color: var(--muted); font-weight: 600; }
+
+  footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.8rem;
+    margin-top: 30px;
+  }
+
+  .disclaimer {
+    font-size: 0.82rem;
+    color: var(--muted);
+    background: var(--chip-bg);
+    border-radius: 8px;
+    padding: 12px 14px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <div class="titleblock">
+      <h1>F-1 / SEVP Policy Watch</h1>
+      <div class="sub">Tracking U.S. student-visa &amp; SEVP/DS-2019 policy changes relevant to a Virginia Tech student who may need an extra semester to finish their degree.</div>
+    </div>
+    <div class="status-light-block">
+      <span class="status-label nochange">No changes today</span>
+      <span class="status-light nochange" title="No new items or status changes found today"></span>
+      <div class="checked">Last run: Aug 15, 2026, 1:11 AM ET (05:11 UTC)</div>
+    </div>
+  </header>
+
+  <div class="panel bulletin">
+    <h2>Bulletin — what matters right now</h2>
+    <ul>
+      <li><span class="badge major">Major</span><span class="badge confirmed">Confirmed</span><strong>Duration of Status (D/S) is being eliminated.</strong> DHS's final rule (published Jul 17, 2026, effective <strong>Sep 15, 2026</strong>) replaces open-ended D/S with a fixed "Admit Until Date" capped at 4 years — the biggest change for anyone who might need extra time to finish. Extra time now requires a formal Extension of Stay (Form I-539, reported fee $420 online / $470 paper) filed with USCIS, on top of the DSO's SEVIS extension. No material update found today. <a href="https://www.federalregister.gov/documents/2026/07/17/2026-14439/establishing-a-fixed-time-period-of-admission-and-an-extension-of-stay-procedure-for-nonimmigrant" target="_blank" rel="noopener">Federal Register</a></li>
+      <li><span class="badge major">Major</span><span class="badge unconfirmed">Unconfirmed</span><strong>A $100,000 fee for OPT work authorization is reportedly under consideration.</strong> Press reports (Forbes, Bloomberg, ICEF Monitor) say the administration is weighing a fee for OPT/STEM OPT work authorization modeled on the now-struck-down $100K H-1B fee. No DHS/USCIS statement or proposed rule yet, and no change since yesterday. Relevant if your plans lean on post-completion OPT after an extra semester. <a href="https://www.forbes.com/sites/annaesakismith/2026/07/31/trump-weighs-100000-fee-for-international-graduates-to-work-in-the-us/" target="_blank" rel="noopener">Forbes</a></li>
+      <li><span class="badge unconfirmed">Unconfirmed</span><strong>USCIS can now deny an incomplete Extension-of-Stay filing without a chance to fix it.</strong> A reported USCIS Policy Alert (PA-2026-05, effective Aug 5, 2026) lets officers deny Form I-539/I-765 filings that are missing initial evidence without first issuing an RFE or NOID. Makes filing an EOS package correctly the first time more important than before. <a href="https://www.mondaq.com/unitedstates/work-visas/1828014/uscis-updates-policy-manual-expanding-authority-to-deny-incomplete-filings-without-first-issuing-rfes-or-noids" target="_blank" rel="noopener">Mondaq summary</a> — official confirmation still pending (uscis.gov unreachable again this run), though ten-plus independent law-firm/press sources agree on the exact date and mechanism.</li>
+      <li><span class="badge unconfirmed">Unconfirmed</span><strong>OPT/STEM OPT is under DHS review but no new rule yet.</strong> DHS has a rulemaking entry (RIN 1653-AA97) to revisit OPT/STEM OPT scope; as of today no Notice of Proposed Rulemaking has been published. One secondary source reports a target NPRM date of February 2027. Relevant if an extra semester plan also depends on post-completion OPT timing. <a href="https://monitor.icef.com/2026/07/us-regulatory-agenda-for-2026-aims-to-end-duration-of-status-and-introduce-optional-practical-training-and-h-1b-reforms/" target="_blank" rel="noopener">ICEF Monitor</a></li>
+      <li><span class="badge watch">Watch</span><span class="badge unconfirmed">Unconfirmed</span><strong>A report projects ~111,000 fewer international students this fall (-9.5%), citing the visa crackdown as a driver.</strong> NAFSA and research firm JB International (Aug 11, 2026) estimate a $3.4B / ~39,000-job economic hit. Additional detail found today (not a status change): the underlying IIE Spring 2026 Snapshot survey reportedly found Jan-Mar 2026 new enrollment down ~20% (bachelor's) and ~24% (master's) year-over-year, with 63% of institutions expecting further declines for 2026-27. Not a new rule, but a signal of how seriously the sector is taking the D/S rule and related changes above. <a href="https://www.washingtonpost.com/education/2026/08/12/foreign-student-enrollment-will-fall-nearly-10-report-predicts/" target="_blank" rel="noopener">Washington Post</a></li>
+      <li><strong>Program length is capped at 4 years</strong> (24 months for language programs), plus 30 days to arrive and 30 days to depart. Extra time now requires a formal <strong>Extension of Stay (EOS)</strong> with USCIS (Form I-539, reported fee $420 online / $470 paper), on top of the DSO's SEVIS extension.</li>
+      <li><strong>Still not final in practice:</strong> as of this run, no lawsuit has been filed and no Congressional Review Act disapproval resolution has passed — coverage continues to describe both as merely "possible." SEVP is reportedly holding a stakeholder webinar on the rule Aug 31, 2026.</li>
+    </ul>
+  </div>
+
+  <div class="panel">
+    <h2>Key dates</h2>
+    <table class="dates">
+      <tr><th>Jul 17, 2026</th><td>DHS/ICE publish the final rule in the Federal Register ("Establishing a Fixed Time Period of Admission and an Extension of Stay Procedure," doc. 2026-14439), ending Duration of Status for F, J, and I nonimmigrants.</td></tr>
+      <tr><th>Aug 5, 2026</th><td>USCIS Policy Alert PA-2026-05 (reported): officers gain discretion to deny incomplete benefit requests, including F-1 Extension-of-Stay filings, without first issuing an RFE/NOID. <em>Unconfirmed against uscis.gov.</em></td></tr>
+      <tr><th>Aug 10, 2026</th><td>Department of State / BridgeUSA reportedly issues Guidance Directive 2026-01 instructing J-1 sponsors on DS-2019/SEVIS record-keeping under the same final rule (J-1-specific; noted here as a sign implementation is actively underway). <em>Unconfirmed against state.gov.</em></td></tr>
+      <tr><th>Aug 11, 2026</th><td>NAFSA / JB International report (reported): projects fall 2026 international enrollment down ~9.5% (~111,000 students), citing visa-policy headwinds including the D/S rule.</td></tr>
+      <tr><th>Aug 31, 2026</th><td>SEVP stakeholder webinar (2–3pm ET, reported) walking through the D/S final rule.</td></tr>
+      <tr><th>Sep 15, 2026</th><td><strong>D/S rule takes effect.</strong> New F-1 entrants and change-of-status approvals on/after this date receive a fixed program end date on their I-94 instead of D/S. Applies to current students too, not just new arrivals. Reportedly also starts a 6-month window before an EOS filing is required for students applying for post-completion OPT/STEM OPT (unconfirmed detail, see item 2 below).</td></tr>
+      <tr><th>Mar 18, 2027</th><td>Deadline for D/S-holders present before Sep 15, 2026 to file Form I-765 (with bundled I-539 where required) for post-completion or STEM OPT under the transition provision, avoiding a separate up-front EOS filing.</td></tr>
+      <tr><th>Feb 2027 (reported, unconfirmed)</th><td>Single secondary source cites this as DHS's own target date for publishing a Notice of Proposed Rulemaking on OPT/STEM OPT (RIN 1653-AA97).</td></tr>
+      <tr><th>Nov 14, 2030 (outside cap)</th><td>Latest possible date a D/S-admitted F-1 student who never leaves/re-enters the U.S. after Sep 15, 2026 can remain under the rule's transition provision (4 years + 60-day grace period from the effective date), even if their I-20 program end date is later.</td></tr>
+    </table>
+  </div>
+
+  <div class="panel">
+    <h2>Detailed writeup</h2>
+
+    <div class="item-block">
+      <h3>1. DHS Final Rule ending Duration of Status</h3>
+      <div class="item-meta"><span class="badge confirmed">Confirmed (official)</span> · first tracked 2026-08-10 · last updated 2026-08-14 · re-checked 2026-08-15</div>
+      <p>For decades, F-1 students were admitted for "Duration of Status" (D/S) — their legal stay tracked their I-20 program dates, and a Designated School Official (DSO) could extend that end date directly in SEVIS for a compelling academic or medical reason, with no separate federal filing required. The new rule ends that. Beginning September 15, 2026, F-1 students receive a fixed "Admit Until Date" on their I-94, set to the length of their program as listed on the I-20 — capped at four years for undergraduate and doctoral programs (24 months for language-training programs) — plus a 30-day grace period to arrive and another 30 days after program completion.</p>
+      <p><strong>Why this matters for someone who might need an extra semester:</strong> there are now two separate actions — (1) the DSO can still extend the Program End Date in SEVIS for a compelling academic or medical reason, for up to one additional year; (2) the student must separately file <span class="mono">Form I-539</span> with USCIS to extend the actual admit-until date before it expires. A timely-filed I-539 buys up to 240 days of authorized stay while pending, but missing the filing deadline risks accruing unlawful presence. The I-539 EOS filing fee is reported at <strong>$420 if filed online / $470 by paper</strong> — a direct out-of-pocket cost that didn't exist under the old DSO-only SEVIS extension.</p>
+      <div class="callout risk"><strong>Practical risk:</strong> USCIS adjudication of Form I-539 is not instant, and the filing must be <em>received</em> before the current admission period expires. Combined with the new RFE/NOID policy below, a late or incomplete filing is now higher-stakes than under the old D/S system.</div>
+      <p><strong>New restrictions:</strong> F-1 graduate students are barred from changing programs, majors, or education levels once enrolled (narrow SEVP exceptions only); first-year undergraduates face a similar bar. Relevant if an extra semester is being used to also switch a concentration or degree level.</p>
+      <p><strong>Transition relief, with a hard outside limit:</strong> students in the U.S. under D/S before Sep 15, 2026 aren't immediately forced to file an EOS, and if they never leave and re-enter the U.S., they may remain until their I-20/OPT/STEM-OPT end date — but <strong>no later than Nov 14, 2030</strong> (four years plus the 60-day grace period, measured from the Sep 15, 2026 effective date). If OPT/STEM OPT is part of the plan, Form I-765 (with I-539 bundled where applicable) must be filed by <strong>Mar 18, 2027</strong> to use the simplified transition path. Leaving and re-entering the U.S. on or after Sep 15, 2026 ends the transition protections immediately — CBP will instead issue a date-specific Admit Until Date with only the new 30-day grace period. Several outlets (e.g. Forbes/Stuart Anderson, Aug 3, 2026) additionally report a "6-month transition reprieve" for OPT/STEM OPT filers; this detail still could not be verified against a directly-rendered official document today, so treat it as reported, not confirmed.</p>
+      <p><strong>Where things stand:</strong> NAFSA and higher-ed associations remain publicly opposed to the rule (see item 5 below for their latest enrollment-impact projection), but as of this run (checked again 2026-08-15) no lawsuit has been filed and no CRA disapproval resolution has passed — reporting still frames both as merely "possible" or "expected," not filed. A direct congress.gov search for a CRA joint resolution of disapproval could not be rendered today either, so this remains based on secondary reporting. No new developments surfaced today beyond what was already tracked. SEVP has scheduled a stakeholder webinar for Aug 31, 2026 (2–3pm ET, no registration required, capped at 1,000 participants, recording to be posted afterward). A parallel Department of State / BridgeUSA guidance directive for J-1 sponsors (reported issued Aug 10, 2026) is a further sign that federal agencies are actively standing up implementation ahead of the effective date, though it's J-1-specific and unconfirmed against state.gov.</p>
+      <p><strong>Virginia Tech specifically:</strong> Cranwell International Center (ISSS) publishes updates at <a href="https://international.vt.edu/immigration_updates.html" target="_blank" rel="noopener">international.vt.edu/immigration_updates.html</a>, but that page could not be fetched directly from this environment's network for a seventh consecutive run today. This is a federal regulation, so guidance from peer international offices (Yale, Cornell, Pitt, Colorado, UIC) applies identically. Consistent advice: talk to your DSO now if there's any chance of needing more time, so the SEVIS extension and USCIS filing aren't both rushed against a hard deadline.</p>
+      <div class="callout action"><strong>Suggested next step:</strong> contact Cranwell International Center before Sep 15, 2026 to get the program end date extended in SEVIS while transition relief still applies, budget for the ~$420-470 I-539 fee, and confirm how VT is sequencing DSO extensions with the new Form I-539 requirement — and make sure any I-539/I-765 package is complete on first submission given the new deny-without-RFE policy below.</div>
+      <p class="src-list"><strong>Sources:</strong>
+        <a href="https://www.federalregister.gov/documents/2026/07/17/2026-14439/establishing-a-fixed-time-period-of-admission-and-an-extension-of-stay-procedure-for-nonimmigrant" target="_blank" rel="noopener">Federal Register (official)</a>
+        <a href="https://www.dhs.gov/news/2026/07/16/trump-administration-issues-final-rule-end-foreign-student-visa-abuse" target="_blank" rel="noopener">DHS newsroom (found via search, not directly rendered)</a>
+        <a href="https://www.nafsa.org/duration-status" target="_blank" rel="noopener">NAFSA</a>
+        <a href="https://oiss.yale.edu/immigration/elimination-of-duration-of-status-summary-faqs" target="_blank" rel="noopener">Yale OISS</a>
+        <a href="https://www.insidehighered.com/news/government/2026/07/16/rule-limiting-international-students-time-us-finalized" target="_blank" rel="noopener">Inside Higher Ed</a>
+        <a href="https://www.bluedataesl.com/post/mark-your-calendar-official-sevp-webinar-on-the-new-f-1-rule-aug-31-2026" target="_blank" rel="noopener">SEVP webinar details (secondary)</a>
+        <a href="https://educonnectusa.com/2026/05/form-i-539-explained-extension-of-stay/" target="_blank" rel="noopener">I-539 fee detail (secondary)</a>
+      </p>
+    </div>
+
+    <div class="item-block">
+      <h3>2. Reported $100,000 fee for OPT / post-completion work authorization</h3>
+      <div class="item-meta"><span class="badge unconfirmed">Reported, unconfirmed</span> · first tracked 2026-08-12 · re-checked 2026-08-15</div>
+      <p>Multiple outlets (Forbes, Bloomberg, ICEF Monitor, The PIE News, Higher Ed Dive) report the administration is weighing a $100,000 fee applicable to OPT employment authorization — and by extension STEM OPT — modeled on the administration's earlier $100,000 H-1B fee proclamation, which was itself struck down by a federal district court on June 8, 2026 and lost on appeal July 24, 2026. As of this run, no signed proclamation, proposed rule, or fee schedule for an OPT fee has been reported, and the administration has still not denied it is under consideration. Immigration attorneys quoted remain skeptical this specific fee could survive a similar legal challenge without Congressional authorization. It remains unresolved who would actually pay it (student, university, or employer).</p>
+      <p><strong>Why it matters here:</strong> a VT student weighing an extra semester is frequently doing so partly to preserve eligibility for post-completion OPT or STEM OPT afterward. A $100K fee, if it materialized, would be a major new cost barrier layered on top of the new Extension-of-Stay filing requirements above — worth watching closely even though it is currently only internal deliberation reported by the press.</p>
+      <p><strong>Confirmation status:</strong> sourced entirely from press reporting (Forbes, Bloomberg, ICEF Monitor, The PIE News, Higher Ed Dive, American Bazaar, Tech Times, NewsNation). No DHS, USCIS, or other .gov statement, proposed rule, or fee schedule has been found. This run again could not reach dhs.gov/news or uscis.gov directly — the network egress tool is fully blocked for every domain attempted today (see operational note below). Will keep checking for any official DHS/USCIS confirmation or denial.</p>
+      <p class="src-list"><strong>Secondary sources:</strong>
+        <a href="https://www.forbes.com/sites/annaesakismith/2026/07/31/trump-weighs-100000-fee-for-international-graduates-to-work-in-the-us/" target="_blank" rel="noopener">Forbes (Esaki-Smith)</a>
+        <a href="https://www.forbes.com/sites/stuartanderson/2026/08/03/new-immigration-plan-considered-to-stop-students-from-working-in-us/" target="_blank" rel="noopener">Forbes (Anderson)</a>
+        <a href="https://www.bloomberg.com/news/articles/2026-07-30/trump-weighs-100-000-fee-for-foreign-students-to-work-post-grad" target="_blank" rel="noopener">Bloomberg</a>
+        <a href="https://monitor.icef.com/2026/08/report-us-considering-a-100000-fee-for-optional-practical-training/" target="_blank" rel="noopener">ICEF Monitor</a>
+        <a href="https://thepienews.com/trump-eyes-100000-opt-fee/" target="_blank" rel="noopener">The PIE News</a>
+        <a href="https://www.highereddive.com/news/week-in-review-a-100k-fee-for-opt/826752/" target="_blank" rel="noopener">Higher Ed Dive</a>
+      </p>
+    </div>
+
+    <div class="item-block">
+      <h3>3. USCIS: deny-without-RFE/NOID policy (PA-2026-05)</h3>
+      <div class="item-meta"><span class="badge unconfirmed">Reported, unconfirmed</span> · first tracked 2026-08-10 · effective (reported) 2026-08-05 · re-checked 2026-08-15</div>
+      <p>Multiple immigration-law sources report that USCIS updated Policy Manual guidance, effective August 5, 2026, giving adjudicators discretion to deny a benefit request that lacks required initial evidence or otherwise fails to establish eligibility — without first issuing a Request for Evidence (RFE) or Notice of Intent to Deny (NOID). Officers may also set RFE response deadlines shorter than the prior 12-week maximum, and the 14-day international-mail grace period for RFE responses has reportedly been eliminated. USCIS reportedly frames this as a response to incomplete or placeholder filings driving adjudication delays.</p>
+      <p><strong>Why it matters here:</strong> under the new fixed-admission-period regime, F-1 students needing an extra semester must file Form I-539 (Extension of Stay) — and OPT/STEM OPT transition filers use Form I-765. A materially incomplete package can now be denied outright rather than getting a chance to supplement the record, raising the cost of filing errors right when more students will be filing EOS applications for the first time.</p>
+      <p><strong>Confirmation status:</strong> this item is sourced from immigration-law-firm reporting (Mondaq, National Law Review, Fragomen, Berardi, Murthy Law Firm, Global Immigration Blog, Envoy Global, EB-5 Insights, SW Law Group, bizlegalservices.com, ARCFE) summarizing a USCIS Policy Alert. This run again could not reach uscis.gov to pull the actual Policy Alert text or PA number directly — the network egress tool remains fully blocked for every domain attempted, government and non-government alike (see operational note below) — so it remains marked <strong>unconfirmed</strong> pending official verification. Ten-plus independent law-firm/press sources continue to consistently agree on the exact date and mechanism, which is stronger-than-usual secondary corroboration, but the tracker only upgrades an item once an actual .gov page is rendered. It will be re-checked against uscis.gov every run.</p>
+      <p class="src-list"><strong>Secondary sources:</strong>
+        <a href="https://www.mondaq.com/unitedstates/work-visas/1828014/uscis-updates-policy-manual-expanding-authority-to-deny-incomplete-filings-without-first-issuing-rfes-or-noids" target="_blank" rel="noopener">Mondaq</a>
+        <a href="https://natlawreview.com/article/uscis-updates-policy-manual-expanding-authority-deny-incomplete-filings-without" target="_blank" rel="noopener">National Law Review</a>
+        <a href="https://www.fragomen.com/insights/united-states-uscis-expands-adjudicators-authority-to-deny-filings-without-a-request-for-evidence.html" target="_blank" rel="noopener">Fragomen</a>
+        <a href="https://berardiimmigrationlaw.com/uscis-restores-authority-to-deny-certain-filings-without-first-issuing-an-rfe/" target="_blank" rel="noopener">Berardi</a>
+        <a href="https://www.murthy.com/2026/08/05/newsflash-uscis-revises-initial-evidence-requirements-and-rfe-noid-guidance/" target="_blank" rel="noopener">Murthy Law Firm</a>
+        <a href="https://www.globalimmigrationblog.com/2026/08/uscis-updates-policy-manual-expanding-authority-to-deny-incomplete-filings-without-first-issuing-rfes-or-noids/" target="_blank" rel="noopener">Global Immigration Blog</a>
+      </p>
+    </div>
+
+    <div class="item-block">
+      <h3>4. DHS regulatory review of OPT/STEM OPT (RIN 1653-AA97)</h3>
+      <div class="item-meta"><span class="badge unconfirmed">Reported, unconfirmed</span> · first tracked 2026-08-10 · re-checked 2026-08-15</div>
+      <p>DHS confirmed in a January 9, 2026 letter that it is re-evaluating the scope and duration of Optional Practical Training (OPT), including STEM OPT, citing fraud, national-security, and worker-displacement concerns. A rulemaking entry (RIN 1653-AA97, titled "Practical Training") appears in the Spring 2026 Unified Regulatory Agenda. As of this run, no Notice of Proposed Rulemaking has been published in the Federal Register. A single secondary source (American Bazaar, Aug 11, 2026) reports the government's own unified agenda lists an NPRM target date of <strong>February 2027</strong> for this rule. OPT and STEM OPT remain fully operational and unchanged today.</p>
+      <p><strong>Why it matters here:</strong> a VT student weighing an extra semester is often also counting on post-completion OPT or STEM OPT timing to work or gain experience afterward. No concrete rule exists yet, but this is worth watching alongside the D/S transition deadline (Mar 18, 2027 above) and the reported $100K OPT fee proposal (item 2 above), since all three could interact for students finishing later than originally planned.</p>
+      <p><strong>Confirmation status:</strong> sourced from immigration-law and higher-ed-press reporting referencing the Unified Agenda entry. This run again could not reach reginfo.gov or federalregister.gov directly (network egress tool fully blocked today) to confirm the RIN entry's text or the reported February 2027 target date, and no NPRM exists yet to cite. No new developments found today. Remains marked <strong>unconfirmed / watch</strong> until an actual proposed or final rule is published.</p>
+      <p class="src-list"><strong>Secondary sources:</strong>
+        <a href="https://eiglaw.com/dhs-confirms-review-of-opt-and-stem-opt/" target="_blank" rel="noopener">Erickson Immigration Group</a>
+        <a href="https://monitor.icef.com/2026/07/us-regulatory-agenda-for-2026-aims-to-end-duration-of-status-and-introduce-optional-practical-training-and-h-1b-reforms/" target="_blank" rel="noopener">ICEF Monitor</a>
+        <a href="https://www.trackmyopt.com/blog/is-opt-ending-dhs-rule-2026" target="_blank" rel="noopener">TrackMyOPT</a>
+        <a href="https://americanbazaaronline.com/2026/08/11/why-experts-say-the-100000-opt-fee-has-little-chance-of-surviving-486144/" target="_blank" rel="noopener">American Bazaar</a>
+      </p>
+    </div>
+
+    <div class="item-block">
+      <h3>5. Report projects ~9.5% drop in fall 2026 international enrollment</h3>
+      <div class="item-meta"><span class="badge unconfirmed">Reported, unconfirmed</span> · first tracked 2026-08-13 · re-checked 2026-08-15</div>
+      <p>NAFSA: Association of International Educators, together with research firm JB International, released a report on Aug 11, 2026 (based on institutional responses to IIE's Spring 2026 Snapshot survey) projecting that international enrollment at U.S. colleges and universities will fall about 9.5% this fall — roughly 111,000 fewer students than the prior year. The analysis attributes the decline to a convergence of headwinds: falling application volumes, persistent visa-appointment bottlenecks, and newly restrictive immigration policy, explicitly including the D/S final rule described in item 1 above. Estimated economic impact: about $3.4 billion in lost local spending and 39,000–40,000 jobs nationally. Additional detail found today: the underlying IIE Spring 2026 Snapshot survey reportedly found new international enrollment down about 20% for bachelor's programs and 24% for master's programs during Jan–Mar 2026 versus the same period last year, with 63% of responding institutions expecting further declines in 2026-27 (vs. 11% expecting increases and 26% expecting stable numbers), and about 85% citing "restrictive government policies or issues obtaining a visa" as the primary driver.</p>
+      <p><strong>Why it matters here:</strong> this is not itself a new rule or a change to any individual student's status — it's an industry-association economic projection. It's tracked here because it's a strong external signal that universities and the sector broadly expect the D/S rule, visa delays, and related policy changes to significantly affect students' ability to enroll and remain enrolled, which is useful context for a student weighing whether an extra semester is viable and how much friction to expect from the system generally (e.g., longer visa-appointment wait times if any international travel is involved during an extension).</p>
+      <p><strong>Confirmation status:</strong> because this is a private-association research projection rather than a government policy claim, there is no .gov document that would ever "confirm" it in the usual sense used elsewhere on this page — it is labeled "Reported, unconfirmed" per this tracker's standard schema, but that should be read here as "not government-verifiable" rather than "doubtful." Could not reach nafsa.org directly this run (network egress tool fully blocked today) to check whether NAFSA has posted the underlying report or methodology PDF itself.</p>
+      <p class="src-list"><strong>Secondary sources:</strong>
+        <a href="https://www.washingtonpost.com/education/2026/08/12/foreign-student-enrollment-will-fall-nearly-10-report-predicts/" target="_blank" rel="noopener">Washington Post</a>
+        <a href="https://www.forbes.com/sites/michaeltnietzel/2026/08/12/projected-loss-of-international-students-could-bring-a-34-billion-hit/" target="_blank" rel="noopener">Forbes</a>
+        <a href="https://monitor.icef.com/2026/08/visa-delays-and-policy-uncertainty-projected-to-reduce-foreign-enrolment-in-the-us-by-more-than-100000-students-this-fall/" target="_blank" rel="noopener">ICEF Monitor</a>
+        <a href="https://americanbazaaronline.com/2026/08/11/us-could-lose-3-4b-as-international-student-enrollment-to-fall-486168/" target="_blank" rel="noopener">American Bazaar</a>
+        <a href="https://www.nafsa.org/fall2026outlook" target="_blank" rel="noopener">NAFSA Fall 2026 Outlook (not directly rendered)</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="panel sources">
+    <h2>Sources checked today</h2>
+    <table class="sources">
+      <tr><th>Source</th><th>Result</th><th>Streak</th></tr>
+      <tr><td>Federal Register (federalregister.gov, incl. search &amp; API)</td><td class="fail">Blocked (network egress)</td><td>6 runs</td></tr>
+      <tr><td>ICE SEVP — What's New (ice.gov/sevis)</td><td class="fail">Blocked (network egress)</td><td>6 runs</td></tr>
+      <tr><td>USCIS Policy Manual Updates (uscis.gov)</td><td class="fail">Blocked (network egress)</td><td>6 runs</td></tr>
+      <tr><td>Study in the States / DHS final-rule hub</td><td class="fail">Blocked (network egress)</td><td>6 runs</td></tr>
+      <tr><td>U.S. Department of State — Student Visas (travel.state.gov)</td><td class="fail">Blocked (network egress)</td><td>6 runs</td></tr>
+      <tr><td>Virginia Tech Cranwell International Center</td><td class="fail">Blocked (network egress)</td><td>7 runs — still worth re-checking</td></tr>
+      <tr><td>NAFSA — Duration of Status tracker</td><td class="fail">Blocked (network egress)</td><td>6 runs</td></tr>
+      <tr><td>Inside Higher Ed</td><td class="fail">Blocked (network egress)</td><td>5 runs</td></tr>
+      <tr><td>GovInfo.gov (Federal Register mirror, alt. path)</td><td class="fail">Blocked (network egress)</td><td>4 runs</td></tr>
+      <tr><td>Reginfo.gov (Unified Regulatory Agenda, alt. path)</td><td class="fail">Blocked (network egress)</td><td>3 runs</td></tr>
+      <tr><td>DHS / ICE Newsroom (press releases)</td><td class="fail">Blocked (network egress)</td><td>3 runs</td></tr>
+      <tr><td>Congress.gov (CRA disapproval resolution search)</td><td class="fail">Blocked (network egress)</td><td>3 runs</td></tr>
+      <tr><td>Murthy Law Firm blog</td><td class="fail">Blocked (network egress) — not re-attempted today</td><td>2 runs</td></tr>
+      <tr><td>Global Immigration Blog (Fragomen)</td><td class="fail">Blocked (network egress) — not re-attempted today</td><td>2 runs</td></tr>
+      <tr><td>Mondaq (secondary source, direct render)</td><td class="fail">Blocked (network egress)</td><td>2 runs</td></tr>
+      <tr><td>Forbes (secondary source, direct render)</td><td class="fail">Blocked (network egress)</td><td>2 runs</td></tr>
+      <tr><td>Web search (general, incl. law-firm blogs, ICEF Monitor, Bloomberg, NAFSA/USCIS content indexed via search)</td><td class="ok">Reached</td><td>—</td></tr>
+    </table>
+    <p style="font-size:0.85rem;color:var(--muted);margin-top:10px;"><strong>Operational note:</strong> for the second consecutive run, the direct-fetch tool returned an explicit "blocked by network egress proxy" error for <em>every</em> domain attempted today — 14 separate targets spanning official .gov sources (federalregister.gov, uscis.gov, ice.gov, dhs.gov, travel.state.gov, studyinthestates.dhs.gov, govinfo.gov, reginfo.gov, congress.gov), university/association sites (international.vt.edu, nafsa.org), press/law-firm sites (forbes.com, mondaq.com, insidehighered.com), and a neutral connectivity check (en.wikipedia.org). This confirms the block is an environment-level egress policy on the direct-fetch tool itself, not a source-specific outage. Web search remains fully functional and is the sole research channel today; all findings above come from search-result synthesis, cross-checked against multiple independent secondary sources where possible. No document could be directly rendered for official verification today, so no item's confirmation status changed this run. Priority re-checks once direct access is restored: uscis.gov/policy-manual/updates (item 3), studyinthestates.dhs.gov (Aug 31 webinar + fee schedule), congress.gov (any CRA disapproval resolution), reginfo.gov (item 4's Feb 2027 NPRM target), and travel.state.gov / state.gov (BridgeUSA Guidance Directive 2026-01).</p>
+  </div>
+
+  <div class="panel">
+    <h2>Run history</h2>
+    <table class="runhist">
+      <tr><th>Run (UTC)</th><th>Run (Eastern)</th><th>Changes?</th><th>Items tracked</th></tr>
+      <tr><td>2026-08-15 05:11 UTC</td><td>2026-08-15 01:11 AM EDT</td><td>No</td><td>5</td></tr>
+      <tr><td>2026-08-14 05:23 UTC</td><td>2026-08-14 01:23 AM EDT</td><td>Yes</td><td>5</td></tr>
+      <tr><td>2026-08-13 05:10 UTC</td><td>2026-08-13 01:10 AM EDT</td><td>Yes</td><td>5</td></tr>
+      <tr><td>2026-08-12 05:10 UTC</td><td>2026-08-12 01:10 AM EDT</td><td>Yes</td><td>4</td></tr>
+      <tr><td>2026-08-11 05:10 UTC</td><td>2026-08-11 01:10 AM EDT</td><td>No</td><td>3</td></tr>
+      <tr><td>2026-08-10 16:52 UTC</td><td>2026-08-10 12:52 PM EDT</td><td>Yes</td><td>3</td></tr>
+      <tr><td>2026-08-10 05:00 UTC</td><td>2026-08-10 01:00 AM EDT</td><td>No (baseline)</td><td>1</td></tr>
+    </table>
+    <p style="font-size:0.8rem;color:var(--muted);margin-top:8px;">Full history: <a href="data/latest.json">data/latest.json</a> · dated snapshots in <a href="data/history/">data/history/</a></p>
+  </div>
+
+  <div class="disclaimer">
+    This page is produced by an automated daily research routine and is for informational tracking purposes only — it is not legal advice. For decisions about a specific student's status, extension timing, or eligibility, consult Virginia Tech's Cranwell International Center (DSO) or a qualified immigration attorney directly.
+  </div>
+
+  <footer>
+    Automated daily check · Sources: ICE SEVP, USCIS, U.S. Department of State, Federal Register, Virginia Tech ISSS, NAFSA &amp; university immigration offices, immigration-law press<br>
+    Run #7 of this tracker. Status light turns red when something changed since yesterday's run; see "Run history" above to confirm the automation is running daily.
+  </footer>
+
+</div>
+</body>
+</html>

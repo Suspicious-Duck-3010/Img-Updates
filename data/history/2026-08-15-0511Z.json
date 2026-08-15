@@ -31,7 +31,7 @@
         "https://ois.uic.edu/immigration/dhs-final-rule-establishing-a-fixed-time-period-of-admission-and-an-extension-of-stay-procedure/",
         "https://educonnectusa.com/2026/05/form-i-539-explained-extension-of-stay/"
       ],
-      "notes": "No lawsuit had been filed and no Congressional Review Act disapproval resolution had passed as of this run (checked 2026-08-15, second check today). NAFSA remains publicly opposed. SEVP stakeholder webinar on the rule remains reported for Mon, Aug 31, 2026, 2-3pm ET. A WebSearch result surfaced a 'Campaign Legal Center: Order Granting Preliminary Injunction' and an Aug 3, 2026 injunction reference that looked promising, but targeted follow-up queries (lawsuit filings, NAFSA legal tracker, law-firm alerts through mid-August) found no actual injunction or filed lawsuit specific to this D/S rule -- that document appears to be an unrelated case surfaced by keyword overlap. Treating the rule's Sep 15, 2026 effective date as still on track pending confirmation either way. Separately, 30 U.S. Senators (led by Sen. Alex Padilla) sent an Aug 11, 2026 letter to Secretary of State Rubio pressing for faster F/M/J visa interview processing before fall term -- tracked as its own item below since it concerns visa *issuance* delays, not the D/S admission-period change itself, but is relevant context for any student who needs to travel and re-enter under the new rule. WebFetch remains unavailable (environment-level egress block); WebSearch is the sole research channel.",
+      "notes": "No lawsuit had been filed and no Congressional Review Act disapproval resolution had passed as of this run (checked 2026-08-15); coverage still describes litigation/CRA action as 'possible' or 'expected,' not filed. NAFSA remains publicly opposed. SEVP stakeholder webinar on the rule remains reported for Mon, Aug 31, 2026, 2-3pm ET, no advance registration, capped at 1,000 participants, recording to be posted after. No new developments surfaced today beyond what was already tracked. IMPORTANT OPERATIONAL NOTE: WebFetch failed for every domain attempted again today (EGRESS_BLOCKED error from the network proxy) -- tested against both .gov targets (federalregister.gov, uscis.gov, ice.gov, dhs.gov, travel.state.gov, studyinthestates.dhs.gov, govinfo.gov, reginfo.gov, congress.gov) and non-government sites (forbes.com, mondaq.com, insidehighered.com, en.wikipedia.org, nafsa.org, international.vt.edu), confirming this is a blanket environment-level egress block on the WebFetch tool rather than a source-specific outage. WebSearch remains functional and is the sole research channel today. Will keep retrying direct .gov rendering each run.",
       "sources_unavailable_for_this_item_today": [
         "federalregister.gov",
         "studyinthestates.dhs.gov",
@@ -49,12 +49,12 @@
       "source": "USCIS Policy Manual (reported)",
       "url": "https://www.mondaq.com/unitedstates/work-visas/1828014/uscis-updates-policy-manual-expanding-authority-to-deny-incomplete-filings-without-first-issuing-rfes-or-noids",
       "date_found": "2026-08-10",
-      "last_updated": "2026-08-15",
+      "last_updated": "2026-08-10",
       "last_checked": "2026-08-15",
       "severity": "moderate",
       "summary": "Effective Aug 5, 2026, USCIS updated Policy Manual guidance so adjudicators may, at their discretion, deny a benefit request lacking required initial evidence or failing to establish eligibility without first issuing an RFE or NOID, and may set RFE response deadlines shorter than the prior 12-week norm (the 14-day international-mail grace period was also eliminated). Directly relevant to F-1 students filing Form I-539 (Extension of Stay) or I-765 under the new fixed-admission-period regime: an incomplete EOS package can now be denied outright with no chance to cure.",
-      "confirmation_status": "Confirmed (official)",
-      "confirming_source_url": "https://www.uscis.gov/newsroom/alerts/uscis-to-reduce-frivolous-immigration-benefits-requests-by-reinforcing-evidence-standards",
+      "confirmation_status": "Reported, unconfirmed",
+      "confirming_source_url": null,
       "secondary_sources": [
         "https://www.mondaq.com/unitedstates/work-visas/1828014/uscis-updates-policy-manual-expanding-authority-to-deny-incomplete-filings-without-first-issuing-rfes-or-noids",
         "https://natlawreview.com/article/uscis-updates-policy-manual-expanding-authority-deny-incomplete-filings-without",
@@ -66,62 +66,17 @@
         "https://www.eb5insights.com/2026/08/10/uscis-raises-the-stakes-incomplete-immigration-filings-may-face-immediate-denial/",
         "https://www.swlgpc.com/uscis-updates-evidentiary-policy-restoring-officer-discretion-on-rfes-noids-and-filing-deadlines/",
         "https://bizlegalservices.com/2026/08/06/uscis-can-now-deny-incomplete-benefits-request-applications-without-an-rfe/",
-        "https://www.arcfe.com/post/uscis-rfe-policy-update-2026",
-        "https://www.uscis.gov/sites/default/files/document/policy-manual-updates/20260805-EvidentiaryStandards.pdf"
+        "https://www.arcfe.com/post/uscis-rfe-policy-update-2026"
       ],
-      "notes": "UPGRADED to Confirmed today: found the official USCIS newsroom alert (uscis.gov/newsroom/alerts/uscis-to-reduce-frivolous-immigration-benefits-requests-by-reinforcing-evidence-standards) and the underlying Policy Alert PA-2026-05 PDF (uscis.gov/sites/default/files/document/policy-manual-updates/20260805-EvidentiaryStandards.pdf), which updates USCIS-PM E.6, E.9, and E.10, effective for requests pending or filed on/after Aug 5, 2026. Directly relevant to F-1 students filing Form I-539 Extension of Stay under the new fixed-admission-period regime: an incomplete EOS package can now be denied outright with no chance to cure via RFE/NOID.",
+      "notes": "Could not reach uscis.gov/policy-manual directly again this run -- WebFetch is fully egress-blocked today (see note on D/S final rule item), so verification again relied entirely on WebSearch snippets. Corroborating secondary reporting (10+ law-firm/press sources) continues to describe the same Aug 5, 2026 effective date and mechanism with no contradicting reports. Per the tracker's rule this stays 'Reported, unconfirmed' until an actual .gov page/PDF is rendered. Will keep retrying uscis.gov each run to move this to Confirmed.",
       "sources_unavailable_for_this_item_today": [
-        "webfetch-tool-wide-egress-block"
-      ]
-    },
-    {
-      "id": "sevp-cpt-bcm-2608-01",
-      "title": "SEVP Broadcast Message BCM 2608-01: DSOs warned on CPT authorization liability, increased scrutiny",
-      "source": "ICE / SEVP (official broadcast message)",
-      "url": "https://www.ice.gov/doclib/sevis/pdf/bcm260801.pdf",
-      "date_found": "2026-08-15",
-      "last_updated": "2026-08-15",
-      "last_checked": "2026-08-15",
-      "severity": "moderate",
-      "summary": "On Aug 12, 2026, SEVP issued Broadcast Message 2608-01, 'Reminder of Liability for DSOs Regarding CPT Authorization,' to every PDSO/DSO at SEVP-certified schools. SEVP says it has observed a rise in Curricular Practical Training (CPT) authorizations that do not meet regulatory requirements -- specifically CPT not constituting an integral part of an established curriculum -- and is increasing scrutiny of CPT approvals. The message does not change the CPT regulation itself and DHS's July D/S final rule separately stated it 'does not prohibit or eliminate Day-1 CPT' and 'does not make substantive changes to CPT.' But it signals stepped-up enforcement: schools found authorizing CPT improperly risk investigation and loss of SEVP certification, and secondary reporting (Murthy Law, American Bazaar) frames this as SEVP tightening the screws on a work-authorization pathway many students -- including those weighing an extra semester -- rely on for practical training before or alongside OPT.",
-      "confirmation_status": "Confirmed (official)",
-      "confirming_source_url": "https://www.ice.gov/doclib/sevis/pdf/bcm260801.pdf",
-      "secondary_sources": [
-        "https://www.murthy.com/2026/08/12/sevp-restricts-cpt-new-warning-to-schools-and-dsos/",
-        "https://americanbazaaronline.com/2026/08/13/international-students-could-face-tighter-cpt-scrutiny-under-new-sevp-warning-486367/",
-        "https://h1btrack.com/blog/sevp-warning-universities-cpt-abuse-f1-students-2026/"
-      ],
-      "notes": "New item found today via WebSearch (not in previous snapshot). Official ICE PDF (bcm260801.pdf) confirms the message and its Aug 12, 2026 date. No regulatory text has changed -- this is a compliance/enforcement reminder, not a rulemaking -- but relevant to track because it raises the stakes for any student using CPT as part of an extended-timeline plan. WebFetch could not render the PDF directly (egress-blocked); relying on WebSearch's rendering of the document plus consistent secondary-source description of its contents.",
-      "sources_unavailable_for_this_item_today": [
-        "webfetch-tool-wide-egress-block"
-      ]
-    },
-    {
-      "id": "senate-letter-visa-backlog-2026-08",
-      "title": "30 Senators press State Dept (Rubio) to clear F/M/J student visa interview backlog before fall term",
-      "source": "Office of Sen. Alex Padilla (official press release) / press reporting",
-      "url": "https://www.padilla.senate.gov/newsroom/press-releases/padilla-leads-senate-colleagues-in-demanding-state-department-process-student-visas-without-delays/",
-      "date_found": "2026-08-15",
-      "last_updated": "2026-08-15",
-      "last_checked": "2026-08-15",
-      "severity": "watch",
-      "summary": "On Aug 11, 2026, 30 U.S. Senators led by Sen. Alex Padilla sent a letter to Secretary of State Marco Rubio saying 'no timely visa appointments are available for students at some embassies and consulates' during peak season, and asking the State Department to restore priority to F, M, and J visa interviews, extend interview waivers for vetted returning students, and boost consular staffing before fall term starts. The letter gives State 30 days to respond to 10 questions -- a deadline around Sep 10, 2026, after most fall terms have already begun. Not a rule change, but directly relevant to any F-1 student (including someone on an extended timeline) who needs to obtain a new visa stamp or renew one to travel and re-enter, especially once the Sep 15, 2026 D/S-to-fixed-admission-period transition takes effect.",
-      "confirmation_status": "Confirmed (official)",
-      "confirming_source_url": "https://www.padilla.senate.gov/newsroom/press-releases/padilla-leads-senate-colleagues-in-demanding-state-department-process-student-visas-without-delays/",
-      "secondary_sources": [
-        "https://www.insidehighered.com/news/quick-takes/2026/08/13/senators-prod-state-dept-process-international-visas",
-        "https://thecollegeinvestor.com/86335/30-senators-press-state-department-to-clear-student-visa-backlog-before-classes-start/",
-        "https://www.kjzz.org/fronteras-desk/2026-08-14/arizonas-sen-kelly-joins-letter-to-rubio-over-processing-delays-for-international-students"
-      ],
-      "notes": "New item found today via WebSearch. Confirmed via the official Senate.gov press release from Sen. Padilla's office confirming the letter was sent; that the letter exists is confirmed, but the State Department has not yet responded (response due ~Sep 10, 2026) -- will track for a State Department reply or any change in interview-scheduling practice.",
-      "sources_unavailable_for_this_item_today": [
-        "state.gov",
+        "uscis.gov/policy-manual/updates",
         "webfetch-tool-wide-egress-block"
       ]
     },
     {
       "id": "opt-stem-opt-regulatory-review",
-      "title": "DHS regulatory review of OPT / STEM OPT (RIN 1653-AA97) — no NPRM published yet",
+      "title": "DHS regulatory review of OPT / STEM OPT (RIN 1653-AA97) \u2014 no NPRM published yet",
       "source": "DHS Unified Regulatory Agenda (reported)",
       "url": "https://monitor.icef.com/2026/07/us-regulatory-agenda-for-2026-aims-to-end-duration-of-status-and-introduce-optional-practical-training-and-h-1b-reforms/",
       "date_found": "2026-08-10",
@@ -139,7 +94,7 @@
         "https://www.visaverge.com/h1b/us-bill-proposes-ending-opt-work-visa-raising-concerns-for-stem-students/",
         "https://chrisrglass.substack.com/p/up-next-opt"
       ],
-      "notes": "No OPT/STEM OPT NPRM has been published as of 2026-08-15 (second check today). No new developments found. WebFetch remains egress-blocked; will keep watching for actual NPRM publication.",
+      "notes": "Could not reach reginfo.gov or federalregister.gov directly this run (WebFetch fully egress-blocked today) to confirm the RIN 1653-AA97 unified-agenda entry text or the reported Feb 2027 NPRM target. No OPT/STEM OPT NPRM has been published as of 2026-08-15. No new developments found today. Will keep watching for actual NPRM publication.",
       "sources_unavailable_for_this_item_today": [
         "federalregister.gov",
         "reginfo.gov",
@@ -169,7 +124,7 @@
         "https://www.techtimes.com/articles/322360/20260730/white-house-weighs-100k-opt-fee-court-already-killed-its-h-1b-equivalent.htm",
         "https://www.newsnationnow.com/us-news/immigration/100k-fee-international-students-stem-opt/"
       ],
-      "notes": "Still no DHS/USCIS/.gov statement, proposed rule, or signed proclamation found confirming or denying this as of 2026-08-15 (second check today). No proclamation has been signed. Reporting continues to cite the First Circuit's rejection of the administration's appeal in the related H-1B $100,000 fee litigation as the key legal headwind to an OPT-fee proclamation surviving challenge.",
+      "notes": "Still no DHS/USCIS/.gov statement, proposed rule, or signed proclamation found confirming or denying this as of 2026-08-15. Could not reach dhs.gov or uscis.gov newsroom directly this run (WebFetch fully egress-blocked today). Reporting continues to note the administration has not denied the plan is under consideration, and continues to cite the First Circuit's July 24, 2026 rejection of the administration's appeal in the related H-1B $100,000 fee litigation as the key legal headwind. Related to but distinct from the RIN 1653-AA97 OPT/STEM OPT rulemaking review above -- reporting still does not tie this fee proposal to that specific rulemaking docket.",
       "sources_unavailable_for_this_item_today": [
         "dhs.gov/news",
         "uscis.gov/policy-manual/updates",
@@ -196,7 +151,7 @@
         "https://monitor.icef.com/2026/08/visa-delays-and-policy-uncertainty-projected-to-reduce-foreign-enrolment-in-the-us-by-more-than-100000-students-this-fall/",
         "https://www.nafsa.org/fall2026outlook"
       ],
-      "notes": "This is a private-association economic/enrollment projection, not a government policy claim, so there is no .gov document that would ever 'confirm' it in the same sense as the other items -- it is tracked as 'Reported, unconfirmed' per the tracker's default schema, but readers should treat that label as 'not a government-verifiable fact' rather than 'possibly false.' Additional corroborating detail found today via WebSearch (not a status change): IIE's Spring 2026 Snapshot survey reportedly found Jan-Mar 2026 new international enrollment down ~20% for bachelor's and ~24% for master's programs year-over-year, with 63% of institutions expecting further declines for 2026-27 vs. 11% expecting increases; ~85% of institutions cited 'restrictive government policies or issues obtaining a visa' as the primary driver. Could not reach nafsa.org directly this run (WebFetch fully egress-blocked today) to render the underlying report/PDF itself. Additional secondary corroboration found today: U.S. News (Aug 5, 2026) reports international enrollment slipping amid visa-rule anxiety, consistent with the NAFSA/JB International projection. Still a research/economic-impact projection, not a government document -- no .gov source will ever 'confirm' it in the same sense as the other items.",
+      "notes": "This is a private-association economic/enrollment projection, not a government policy claim, so there is no .gov document that would ever 'confirm' it in the same sense as the other items -- it is tracked as 'Reported, unconfirmed' per the tracker's default schema, but readers should treat that label as 'not a government-verifiable fact' rather than 'possibly false.' Additional corroborating detail found today via WebSearch (not a status change): IIE's Spring 2026 Snapshot survey reportedly found Jan-Mar 2026 new international enrollment down ~20% for bachelor's and ~24% for master's programs year-over-year, with 63% of institutions expecting further declines for 2026-27 vs. 11% expecting increases; ~85% of institutions cited 'restrictive government policies or issues obtaining a visa' as the primary driver. Could not reach nafsa.org directly this run (WebFetch fully egress-blocked today) to render the underlying report/PDF itself.",
       "sources_unavailable_for_this_item_today": [
         "nafsa.org",
         "webfetch-tool-wide-egress-block"
@@ -205,46 +160,102 @@
   ],
   "sources_unavailable": [
     {
+      "source_name": "ICE SEVP - What's New",
+      "url": "https://www.ice.gov/sevis/whats-new",
+      "first_failed_date": "2026-08-10",
+      "last_failed_date": "2026-08-15",
+      "consecutive_fails": 6
+    },
+    {
+      "source_name": "USCIS Policy Manual Updates",
+      "url": "https://www.uscis.gov/policy-manual/updates",
+      "first_failed_date": "2026-08-10",
+      "last_failed_date": "2026-08-15",
+      "consecutive_fails": 6
+    },
+    {
+      "source_name": "Federal Register (document + search/API)",
+      "url": "https://www.federalregister.gov/documents/2026/07/17/2026-14439/establishing-a-fixed-time-period-of-admission-and-an-extension-of-stay-procedure-for-nonimmigrant",
+      "first_failed_date": "2026-08-10",
+      "last_failed_date": "2026-08-15",
+      "consecutive_fails": 6
+    },
+    {
+      "source_name": "Study in the States / DHS final-rule hub",
+      "url": "https://studyinthestates.dhs.gov/final-rule-establishing-a-fixed-time-period-of-admission-and-an-extension-of-stay-procedure-quick",
+      "first_failed_date": "2026-08-10",
+      "last_failed_date": "2026-08-15",
+      "consecutive_fails": 6
+    },
+    {
       "source_name": "U.S. Department of State - Student Visas",
       "url": "https://travel.state.gov/content/travel/en/students-exchange.html",
       "first_failed_date": "2026-08-10",
       "last_failed_date": "2026-08-15",
-      "consecutive_fails": 7
+      "consecutive_fails": 6
     },
     {
       "source_name": "Virginia Tech Cranwell International Center - Immigration Updates",
       "url": "https://international.vt.edu/immigration_updates.html",
       "first_failed_date": "2026-08-10",
       "last_failed_date": "2026-08-15",
-      "consecutive_fails": 8
+      "consecutive_fails": 7
+    },
+    {
+      "source_name": "NAFSA - Duration of Status Rule tracker",
+      "url": "https://www.nafsa.org/duration-status",
+      "first_failed_date": "2026-08-10",
+      "last_failed_date": "2026-08-15",
+      "consecutive_fails": 6
+    },
+    {
+      "source_name": "Inside Higher Ed",
+      "url": "https://www.insidehighered.com/news/government/2026/07/16/rule-limiting-international-students-time-us-finalized",
+      "first_failed_date": "2026-08-10",
+      "last_failed_date": "2026-08-15",
+      "consecutive_fails": 5
     },
     {
       "source_name": "GovInfo.gov (Federal Register mirror)",
       "url": "https://www.govinfo.gov/content/pkg/FR-2026-07-17/html/2026-14439.htm",
       "first_failed_date": "2026-08-11",
       "last_failed_date": "2026-08-15",
-      "consecutive_fails": 5
+      "consecutive_fails": 4
     },
     {
       "source_name": "Reginfo.gov (Unified Regulatory Agenda)",
       "url": "https://www.reginfo.gov/public/do/eAgendaMain",
       "first_failed_date": "2026-08-11",
       "last_failed_date": "2026-08-15",
-      "consecutive_fails": 4
+      "consecutive_fails": 3
+    },
+    {
+      "source_name": "Murthy Law Firm blog",
+      "url": "https://www.murthy.com/2026/08/05/newsflash-uscis-revises-initial-evidence-requirements-and-rfe-noid-guidance/",
+      "first_failed_date": "2026-08-11",
+      "last_failed_date": "2026-08-12",
+      "consecutive_fails": 2
+    },
+    {
+      "source_name": "Global Immigration Blog (Fragomen)",
+      "url": "https://www.globalimmigrationblog.com/2026/08/uscis-updates-policy-manual-expanding-authority-to-deny-incomplete-filings-without-first-issuing-rfes-or-noids/",
+      "first_failed_date": "2026-08-11",
+      "last_failed_date": "2026-08-12",
+      "consecutive_fails": 2
     },
     {
       "source_name": "DHS / ICE Newsroom (press releases)",
       "url": "https://www.dhs.gov/news",
       "first_failed_date": "2026-08-12",
       "last_failed_date": "2026-08-15",
-      "consecutive_fails": 4
+      "consecutive_fails": 3
     },
     {
       "source_name": "Congress.gov (CRA disapproval resolution search)",
       "url": "https://www.congress.gov/search?q=%7B%22source%22%3A%22legislation%22%2C%22search%22%3A%22duration+of+status+disapproval%22%7D",
       "first_failed_date": "2026-08-13",
       "last_failed_date": "2026-08-15",
-      "consecutive_fails": 4
+      "consecutive_fails": 3
     },
     {
       "source_name": "Mondaq (secondary source, direct render)",
@@ -269,8 +280,8 @@
     }
   ],
   "last_run_at": {
-    "utc": "2026-08-15T15:44:52Z",
-    "eastern": "2026-08-15 11:44 AM EDT"
+    "utc": "2026-08-15T05:11:58Z",
+    "eastern": "2026-08-15 01:11 AM EDT"
   },
   "run_history": [
     {
@@ -314,12 +325,6 @@
       "eastern": "2026-08-15 01:11 AM EDT",
       "has_changes": false,
       "item_count": 5
-    },
-    {
-      "utc": "2026-08-15T15:44:52Z",
-      "eastern": "2026-08-15 11:44 AM EDT",
-      "has_changes": true,
-      "item_count": 7
     }
   ]
 }
